@@ -67,7 +67,7 @@ module SimpleForm
         elsif object.class.respond_to?(:human_attribute_name)
           object.class.human_attribute_name(reflection_or_attribute_name.to_s)
         else
-          attribute_name.to_s.humanize
+          attribute_name.to_s.send SimpleForm.label_format_method.to_sym
         end
       end
 

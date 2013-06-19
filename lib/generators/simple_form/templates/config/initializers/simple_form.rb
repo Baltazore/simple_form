@@ -139,4 +139,7 @@ SimpleForm.setup do |config|
 
   # Cache SimpleForm inputs discovery
   # config.cache_discovery = !Rails.env.development?
+
+  # Change default SimpleForm method for formatting label
+  config.label_format_method = :humanize
 end
